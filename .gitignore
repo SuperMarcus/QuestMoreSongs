@@ -1,0 +1,12 @@
+.DS_Store
+extern/
+crashes/
+libs/
+obj/
+Android.mk.backup
+qpm.shared.json
+MoreSongs.zip
+.idea
+cmake-build-debug
+MoreSongs.qmod
+MoreSongs.*.qmod

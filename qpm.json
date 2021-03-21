@@ -1,0 +1,48 @@
+{
+  "sharedDir": "shared",
+  "dependenciesDir": "extern",
+  "info": {
+    "name": "moresongs",
+    "id": "moresongs",
+    "version": "1.0.0",
+    "url": "https://github.com/SuperMarcus/QuestMoreSongs",
+    "additionalData": {}
+  },
+  "dependencies": [
+    {
+      "id": "codegen",
+      "versionRange": "^0.7.0",
+      "additionalData": {}
+    },
+    {
+      "id": "custom-types",
+      "versionRange": "^0.5.1",
+      "additionalData": {}
+    },
+    {
+      "id": "questui",
+      "versionRange": "^0.5.0",
+      "additionalData": {}
+    },
+    {
+      "id": "beatsaber-hook",
+      "versionRange": "^1.2.3",
+      "additionalData": {
+        "extraFiles": [
+          "src/inline-hook"
+        ]
+      }
+    },
+    {
+      "id": "libil2cpp",
+      "versionRange": "^0.1.2",
+      "additionalData": {}
+    },
+    {
+      "id": "modloader",
+      "versionRange": "^1.0.4",
+      "additionalData": {}
+    }
+  ],
+  "additionalData": {}
+}
