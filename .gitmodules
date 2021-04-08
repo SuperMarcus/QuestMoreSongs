@@ -4,4 +4,4 @@
 [submodule "extern/songloader"]
 	path = extern/songloader
 	url = https://github.com/darknight1050/SongLoader.git
-	branch = async-test
+	branch = main

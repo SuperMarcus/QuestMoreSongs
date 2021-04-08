@@ -3,14 +3,14 @@ TARGET_ARCH_ABI := $(APP_ABI)
 
 rwildcard=$(wildcard $1$2) $(foreach d,$(wildcard $1*),$(call rwildcard,$d/,$2))
 
-# Creating prebuilt for dependency: beatsaber-hook - version: 1.2.3
+# Creating prebuilt for dependency: beatsaber-hook - version: 1.2.4
 include $(CLEAR_VARS)
-LOCAL_MODULE := beatsaber-hook_1_2_3
+LOCAL_MODULE := beatsaber-hook_1_2_4
 LOCAL_EXPORT_C_INCLUDES := extern/beatsaber-hook
-LOCAL_SRC_FILES := extern/libbeatsaber-hook_1_2_3.so
+LOCAL_SRC_FILES := extern/libbeatsaber-hook_1_2_4.so
 LOCAL_CPP_FEATURES += exceptions
 include $(PREBUILT_SHARED_LIBRARY)
-# Creating prebuilt for dependency: modloader - version: 1.0.4
+# Creating prebuilt for dependency: modloader - version: 1.1.0
 include $(CLEAR_VARS)
 LOCAL_MODULE := modloader
 LOCAL_EXPORT_C_INCLUDES := extern/modloader
@@ -41,9 +41,9 @@ include $(PREBUILT_SHARED_LIBRARY)
 
 # Prebuilt SongLoader
 include $(CLEAR_VARS)
-LOCAL_MODULE := songloader_0_1_0
+LOCAL_MODULE := songloader
 LOCAL_EXPORT_C_INCLUDES := extern/songloader
-LOCAL_SRC_FILES := extern/libsongloader_0_1_0.so
+LOCAL_SRC_FILES := extern/libsongloader.so
 LOCAL_CPP_FEATURES += exceptions
 include $(PREBUILT_SHARED_LIBRARY)
 
@@ -59,13 +59,13 @@ LOCAL_MODULE := moresongs
 LOCAL_SRC_FILES += $(call rwildcard,src/**,*.cpp)
 LOCAL_SRC_FILES += $(call rwildcard,extern/beatsaber-hook/src/inline-hook/,*.cpp)
 LOCAL_SRC_FILES += $(call rwildcard,extern/beatsaber-hook/src/inline-hook/,*.c)
-LOCAL_SHARED_LIBRARIES += beatsaber-hook_1_2_3
+LOCAL_SHARED_LIBRARIES += beatsaber-hook_1_2_4
 LOCAL_SHARED_LIBRARIES += modloader
 LOCAL_SHARED_LIBRARIES += custom-types
 LOCAL_SHARED_LIBRARIES += questui
 LOCAL_SHARED_LIBRARIES += codegen_0_7_0
 LOCAL_SHARED_LIBRARIES += zip
-LOCAL_SHARED_LIBRARIES += songloader_0_1_0
+LOCAL_SHARED_LIBRARIES += songloader
 LOCAL_LDLIBS += -llog
 LOCAL_CFLAGS += -DVERSION='"1.0.0"' -DID='"moresongs"' -isystem 'extern/libil2cpp/il2cpp/libil2cpp'
 LOCAL_CPPFLAGS += -std=c++2a -frtti

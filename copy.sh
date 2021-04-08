@@ -3,7 +3,7 @@
 adb shell am force-stop com.beatgames.beatsaber
 
 adb push libs/arm64-v8a/libmoresongs.so /sdcard/Android/data/com.beatgames.beatsaber/files/mods/
-adb push libs/arm64-v8a/libsongloader*.so /sdcard/Android/data/com.beatgames.beatsaber/files/mods/
+adb push libs/arm64-v8a/libsongloader.so /sdcard/Android/data/com.beatgames.beatsaber/files/mods/
 
 # Libs
 adb push libs/arm64-v8a/libquestui.so /sdcard/Android/data/com.beatgames.beatsaber/files/libs/
